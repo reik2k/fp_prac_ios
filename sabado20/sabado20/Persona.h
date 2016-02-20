@@ -11,14 +11,14 @@
 @interface Persona_h : NSObject
 
 @property (nonatomic, strong) NSString *nombre;
+@property (nonatomic, weak) NSString *apellido;
+
 
 - (void) tellMeName;
 
 -(instancetype) initWithNombre:(NSString *) nombre;
 
-+(instancetype) newPersonaConNombre:(NSString *) peronaNombre{
-
-}
++(instancetype) newPersonaConNombre:(NSString *) peronaNombre;
 
 @end
 
