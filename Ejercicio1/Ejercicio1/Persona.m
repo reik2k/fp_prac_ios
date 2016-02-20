@@ -12,7 +12,7 @@
 @implementation Persona
 
 - (void) saludar{
-    NSLog(@"Hola Mundo");
+    NSLog(@"Hola, %@ %@", self.nombre, self.apellidos);
 }
 
 - (void) decir : nombre{
