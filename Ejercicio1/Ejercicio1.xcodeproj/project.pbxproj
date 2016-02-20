@@ -45,7 +45,6 @@
 			isa = PBXGroup;
 			children = (
 				7D745AAE1C78886300E49FCC /* Ejercicio1 */,
-				7D745AAD1C78886300E49FCC /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,6 +54,7 @@
 				7D745AAC1C78886300E49FCC /* Ejercicio1 */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		7D745AAE1C78886300E49FCC /* Ejercicio1 */ = {
@@ -63,6 +63,7 @@
 				7D745AAF1C78886300E49FCC /* main.m */,
 				7D745AB61C78887300E49FCC /* Persona.h */,
 				7D745AB71C78888300E49FCC /* Persona.m */,
+				7D745AAD1C78886300E49FCC /* Products */,
 			);
 			path = Ejercicio1;
 			sourceTree = "<group>";

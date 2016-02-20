@@ -7,11 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Persona.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
         NSLog(@"Hello, World!");
+        
+        Persona *personaCreada = [Persona new];
+        
+        personaCreada.nombre = @"Pepe";
+        personaCreada.apellidos = @"Gómez García";
+        
+        [personaCreada saludar];
+        [personaCreada decir:@"ey que pasa!"];
+        //NSLog(@"%@", [personaCreada saludar]);
     }
     return 0;
 }

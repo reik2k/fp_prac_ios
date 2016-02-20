@@ -6,17 +6,41 @@
 //  Copyright © 2016 usal. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+//#import <Foundation/Foundation.h> es igual a @import Foundation;
+@import Foundation;
 #import "Persona.h"
 
 @implementation Persona
 
-- (void) saludar{
-    NSLog(@"Hola, %@ %@", self.nombre, self.apellidos);
+#pragma Mark - Impl. Init
+
+- (instancetype) initWithNombre: (NSString *)miNombre {
+    
+    if (self = [super init]) {
+        _nombre = miNombre;
+    }
+    return self;
 }
 
-- (void) decir : nombre{
-    NSLog(@"Hola Mundo %@", nombre);
+- (instancetype) initWithApellidos: (NSString *)miApellidos {
+    
+    if (self = [super init]) {
+        _apellidos = miApellidos;
+    }
+    return self;
+}
+
+#pragma Mark - Impl. Métodos
+
+- (NSString *) saludar{
+    
+    NSString *saludo = [NSString stringWithFormat:@"Hola %@ %@"];
+    
+    return saludo;
+}
+
+- (void) decir : algo{
+    NSLog(@"Hola Mundo %@", algo);
 }
 
 @end
