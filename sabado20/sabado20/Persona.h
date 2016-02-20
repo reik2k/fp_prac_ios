@@ -9,6 +9,12 @@
 /* Persona_h */
 @class Vivienda;
 
+typedef enum : NSUInteger
+{
+    hombre = 0,
+    mujer
+}Genero;
+
 @interface Persona_h : NSObject
 
 #pragma mark - ATRIBUTOS
@@ -43,7 +49,7 @@
  strong - para objectos
  weak   - para referencias, no como tales sino como relaciones entre obj.
             nil está liberado por lo que podría tomar ese valor esa variable.
- assing - 
+ assing -
  
  */
 
