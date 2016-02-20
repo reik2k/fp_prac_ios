@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D745AA21C787EAD00E49FCC /* Vivienda.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D745AA11C787EAD00E49FCC /* Vivienda.m */; };
 		7DA5E2191C7867C0000F9BAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5E2181C7867C0000F9BAE /* main.m */; };
 		7DA5E2211C7868BD000F9BAE /* Persona.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA5E2201C7868BD000F9BAE /* Persona.m */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7D745AA01C787E9D00E49FCC /* Vivienda.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vivienda.h; sourceTree = "<group>"; };
+		7D745AA11C787EAD00E49FCC /* Vivienda.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vivienda.m; sourceTree = "<group>"; };
 		7DA5E2151C7867C0000F9BAE /* sabado20 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = sabado20; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA5E2181C7867C0000F9BAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7DA5E21F1C78687D000F9BAE /* Persona.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Persona.h; sourceTree = "<group>"; };
@@ -63,6 +66,8 @@
 				7DA5E2181C7867C0000F9BAE /* main.m */,
 				7DA5E21F1C78687D000F9BAE /* Persona.h */,
 				7DA5E2201C7868BD000F9BAE /* Persona.m */,
+				7D745AA01C787E9D00E49FCC /* Vivienda.h */,
+				7D745AA11C787EAD00E49FCC /* Vivienda.m */,
 			);
 			path = sabado20;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DA5E2211C7868BD000F9BAE /* Persona.m in Sources */,
+				7D745AA21C787EAD00E49FCC /* Vivienda.m in Sources */,
 				7DA5E2191C7867C0000F9BAE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,6 +249,7 @@
 				7DA5E21E1C7867C0000F9BAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
