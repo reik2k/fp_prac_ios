@@ -7,3 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Persona.h"
+
+@implementation Persona
+
+- (void) saludar{
+    NSLog(@"Hola Mundo");
+}
+
+- (void) decir : nombre{
+    NSLog(@"Hola Mundo %@", nombre);
+}
+
+@end
