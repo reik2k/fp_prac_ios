@@ -7,6 +7,7 @@
 //
 
 #import "myViewController.h"
+#import <UIKit/UIKit.h>
 
 @interface myViewController ()
 
@@ -41,7 +42,40 @@
     
     [super viewDidAppear:animated];
     
+    NSString *cadena;
+    
+    if(animated){
+        cadena = @"Animado tiene valor";
+    }else{
+        cadena = @"Animado es vacía";
+    }
+    
+    NSLog(@"He entrado en viewDidAppear %@", cadena);
+    
+    
+    //CREAR UN PUTO ALERT CON TODO ESTE ZURULLO
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Title"
+                                                                             message:@"Ey qué pasa!!"
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+    //We add buttons to the alert controller by creating UIAlertActions:
+    UIAlertAction *actionOk = [UIAlertAction actionWithTitle:@"Ok"
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:nil]; //You can use a block here to handle a press on this button
+    [alertController addAction:actionOk];
+    [self presentViewController:alertController animated:YES completion:nil];
+    
+    
 }
+
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -50,6 +84,7 @@
     NSLog(@"Estoy en recibiendo un Aviso de LowMemory");
 }
 
+/*
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -63,7 +98,7 @@
 }
 
 
-/*
+/
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
@@ -107,7 +142,7 @@
 }
 */
 
-//*
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
