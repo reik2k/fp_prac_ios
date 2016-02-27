@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  myViewController.h
 //  HolaMundo
 //
 //  Created by alumno5 on 27/2/16.
@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
-//definiriamos métodos públicos
+@interface myViewController : UITableViewController
 
 @end
-
