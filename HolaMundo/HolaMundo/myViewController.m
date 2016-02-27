@@ -89,6 +89,10 @@
     NSLog(@"Estoy en recibiendo un Aviso de LowMemory");
 }
 
+-(void)btnClicked:(id)sender{
+    
+}
+
 /*
 #pragma mark - Table view data source
 
@@ -157,4 +161,6 @@
 }
 //*/
 
+- (IBAction)btnClicked:(id)sender {
+}
 @end

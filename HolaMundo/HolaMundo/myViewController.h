@@ -10,4 +10,12 @@
 
 @interface myViewController : UIViewController
 
+//son Weak por defecto pero la propia viewcontroller
+//lo retiene de manera strong
+@property (weak, nonatomic) IBOutlet UIButton *btnClick;
+
+//En el botón pulsas CTRL y lo arrastras al código
+//Luego lo sellecionas como Action en lugar de Outlet
+- (IBAction)btnClicked:(id)sender;
+
 @end
