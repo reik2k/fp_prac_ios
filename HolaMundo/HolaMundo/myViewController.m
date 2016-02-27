@@ -14,6 +14,7 @@
 
 @implementation myViewController
 
+#pragma mark - Ciclo de Vida
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -24,6 +25,22 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     NSLog(@"Estoy en viewDidLoad");
+}
+
+// METODO PARA SOBRECARGAR LO QUE QUERAMOS ANTES DE APARECER LA VISTA
+-(void) viewWillAppear:(BOOL)animated{
+    
+    //El no incluir pueden que no den problemas pero sino se invocan pueden generar bugs de pintado
+    [super viewWillAppear:animated];
+    
+    //
+}
+
+//METODO CUANDO A CARGADO LA VISTA Y EL PROPIO USUARIO VE LO QUE HEMOS DEFINIDO PARA PINTAR
+- (void) viewDidAppear:(BOOL)animated{
+    
+    [super viewDidAppear:animated];
+    
 }
 
 - (void)didReceiveMemoryWarning {
