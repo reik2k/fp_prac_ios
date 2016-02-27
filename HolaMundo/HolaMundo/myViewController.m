@@ -34,7 +34,8 @@
     //El no incluir pueden que no den problemas pero sino se invocan pueden generar bugs de pintado
     [super viewWillAppear:animated];
     
-    //
+    NSLog(@"Estoy en viewWillAppear");
+
 }
 
 //METODO CUANDO A CARGADO LA VISTA Y EL PROPIO USUARIO VE LO QUE HEMOS DEFINIDO PARA PINTAR
@@ -55,7 +56,7 @@
     
     //CREAR UN PUTO ALERT CON TODO ESTE ZURULLO
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Title"
-                                                                             message:@"Ey qué pasa!!"
+                                                                             message:@"Ey qué pasa!"
                                                                       preferredStyle:UIAlertControllerStyleAlert];
     //We add buttons to the alert controller by creating UIAlertActions:
     UIAlertAction *actionOk = [UIAlertAction actionWithTitle:@"Ok"
@@ -69,10 +70,14 @@
 
 - (void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
+    
+    NSLog(@"[viewDidDisappear] Yame fui al viewController B");
 }
 
+//Solo aparecré cuando pasemos de un viewController a otro
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
+    NSLog(@"[viewWillDisappear] Voy a ir en breves a ViewController B");
 }
 
 
