@@ -81,10 +81,17 @@
                                          message:@"Debe rellenar un nombre"
                                          preferredStyle:UIAlertControllerStyleAlert];
         //Añadir un botón
-        UIAlertAction *action=[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDestructive handler:nil];
+        UIAlertAction *action=[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action){
+            NSString *usuario=controller.textFields[0].text;
+        }];
 
         //Unirlo al dialog
         [controller addAction:action];
+        
+        //Añadir un TextField
+        [controller  addTextFieldWithConfigurationHandler:^(UITextField *_Nonnull textField){
+            textField.placeholder=@"Escribe un valor";
+            }];
         
         [self presentViewController:controller animated: YES completion:^{
                 //Introducir codigo para implementar el
@@ -92,6 +99,7 @@
         
     }
 }
+
 #pragma mark - Terxfield
 -(void)textFildDidBeginEditing:(UITextField *) textDield{
     NSLog(@"He comenzado a escribir");
