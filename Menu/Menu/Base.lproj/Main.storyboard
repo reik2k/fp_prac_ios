@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,31 +19,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="My Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vmd-AJ-dtP">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="My Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vmd-AJ-dtP">
                                 <rect key="frame" x="193" y="147" width="160" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="yes"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="hp2-Eo-QFp"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="My Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fYc-6g-ewt">
-                                <rect key="frame" x="193" y="201" width="160" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="My Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fYc-6g-ewt">
+                                <rect key="frame" x="247" y="220" width="107" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="NJP-E0-mJR"/>
+                                </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngc-UO-GVw">
-                                <rect key="frame" x="193" y="280" width="160" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="correo@example.com" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ssG-9o-qRV">
+                                <rect key="frame" x="219" y="250" width="162" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="6xI-m4-yDz"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngc-UO-GVw">
+                                <rect key="frame" x="150" y="300" width="300" height="30"/>
                                 <color key="backgroundColor" red="0.59144162864297101" green="0.61194491386413574" blue="0.44145282714593004" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="send">
                                     <color key="titleColor" red="0.85790412370000002" green="1" blue="0.7611951629" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="correo@example.com" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ssG-9o-qRV">
-                                <rect key="frame" x="190" y="103" width="160" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.85790412370000002" green="1" blue="0.7611951629" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ssG-9o-qRV" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-20" id="AOg-tm-4ML"/>
+                            <constraint firstItem="vmd-AJ-dtP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FAy-T7-0Dt"/>
+                            <constraint firstItem="Ngc-UO-GVw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Imz-RB-T4F"/>
+                            <constraint firstItem="fYc-6g-ewt" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="Kb6-4B-Elj"/>
+                            <constraint firstItem="fYc-6g-ewt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RBJ-i7-Ehw"/>
+                            <constraint firstItem="ssG-9o-qRV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cdJ-bz-BX1"/>
+                            <constraint firstItem="Ngc-UO-GVw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kpf-LS-ZW6"/>
+                            <constraint firstItem="Ngc-UO-GVw" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="nbF-r3-cs8"/>
+                            <constraint firstItem="vmd-AJ-dtP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v97-EI-97i"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="btnEmail" destination="ssG-9o-qRV" id="5Hr-Lf-c7O"/>

@@ -11,7 +11,10 @@
 //CTRL + Drag&Drop del elemento al código
 @interface ViewController : UIViewController<UITextFieldDelegate>
 
-
+@property (weak, nonatomic) IBOutlet UITextField *btnEmail;
+@property (weak, nonatomic) IBOutlet UITextField *btnName;
+@property (weak, nonatomic) IBOutlet UITextField *btnPassword;
+@property (weak, nonatomic) IBOutlet UIButton *btnSend;
 
 @end
 
